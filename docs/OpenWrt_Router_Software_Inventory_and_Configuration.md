@@ -53,6 +53,8 @@ Ruuteri täpne mudel, arhitektuur, sihtplatvorm, kerneli versioon ja paigaldatud
 - Ruuteri VPN-aadress: `10.14.0.1/24`
 - Esimese Windowsi halduskliendi aadress: `10.14.0.2/32`
 - Kuulamisport: UDP `51820`
+- võti root@drahobudice:~# cat /etc/wireguard/server.pub
+QnBXN/5NUGCETE66ZlLCeKJffWNPLCng+xd2FuesTV0=
 - Lubatud haldusteenused VPN-ist ruuterisse:
   - ICMP echo;
   - SSH TCP `22`;
