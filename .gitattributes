@@ -1,0 +1,56 @@
+﻿# Tekstifailide reavahetused
+# Git säilitab hoidlas LF-reavahetused.
+* text=auto
+
+# Dokumentatsioon ja konfiguratsioonifailid
+*.md       text eol=lf
+*.txt      text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.json     text eol=lf
+*.toml     text eol=lf
+*.ini      text eol=lf
+*.conf     text eol=lf
+
+# Linuxi ja OpenWrt skriptid peavad kasutama LF-reavahetusi
+*.sh       text eol=lf
+*.service  text eol=lf
+*.timer    text eol=lf
+*.socket   text eol=lf
+*.target   text eol=lf
+
+# Windowsi skriptid
+*.ps1      text eol=crlf
+*.cmd      text eol=crlf
+*.bat      text eol=crlf
+
+# OpenWrt UCI konfiguratsioonifailid
+network    text eol=lf
+firewall   text eol=lf
+wireless   text eol=lf
+dropbear   text eol=lf
+uhttpd     text eol=lf
+dhcp       text eol=lf
+system     text eol=lf
+
+# Git ja redaktori konfiguratsioon
+.gitignore     text eol=lf
+.gitattributes text eol=lf
+.editorconfig  text eol=lf
+
+# Binaarfailid: Git ei teisenda reavahetusi
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.webp     binary
+*.ico      binary
+*.pdf      binary
+*.zip      binary
+*.gz       binary
+*.tgz      binary
+*.tar      binary
+*.7z       binary
+*.docx     binary
+*.xlsx     binary
+*.pptx     binary

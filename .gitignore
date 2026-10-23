@@ -1,0 +1,54 @@
+﻿# Saladused ja võtmed
+*.key
+*.pem
+*.p12
+*.pfx
+*.psk
+*.secret
+*.secrets
+.env
+.env.*
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*_private
+*_private.*
+private/
+secrets/
+
+# OpenWrt varukoopiad
+backup-*.tar
+backup-*.tar.gz
+*.tgz
+
+# OpenWrt püsivara ja binaarfailid
+openwrt-*.bin
+*.img
+*.img.gz
+
+# WireGuard
+wg*.conf
+wireguard/*.conf
+wireguard/*.key
+
+# Windowsi otseteed
+*.url
+*.lnk
+
+# Kontoritarkvara dokumendid säilivad kohaliku arhiivina
+*.doc
+*.docx
+
+# Ajutised ja varufailid
+*.tmp
+*.bak
+*.swp
+*~
+Thumbs.db
+.DS_Store
+
+# Kohalikud allalaadimised ja arhiivid
+downloads/
+archive/
+local-only/
