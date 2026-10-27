@@ -186,7 +186,6 @@ Git-hoidlasse ei kanta paroole, SSH või WireGuardi privaatvõtmeid, WireGuardi 
 
 ## 12. Veel seadistamata või dokumenteerimata
 
-- serveri püsiv LAN-aadress või DHCP staatiline rent;
 - Restic-varundus;
 - Decidimi Docker Compose'i keskkond;
 - PostgreSQL-i varundus;
@@ -195,9 +194,11 @@ Git-hoidlasse ei kanta paroole, SSH või WireGuardi privaatvõtmeid, WireGuardi 
 - Grafana;
 - TimescaleDB;
 - Traefik või Nginx;
-- Decidimi rakendus;
 - SSH-serveri turvakõvastuse lõplik konfiguratsioon;
 - rakendus- ja konfiguratsioonifailide lõplik paigutus Git-hoidlas.
+- Parandada sisevõrgu TLS sertifikaat:
+lisada Subject Alternative Name (SAN).
+-
 
 ## 13. Kontrollkäsud
 
