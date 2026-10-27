@@ -127,25 +127,19 @@ Kataloogide tegelik olemasolu, omanikud, rühmad ja õigused tuleb dokumenteerid
 
 ## 9.1. Decidimi teenuse tegelik seis
 
-Decidim teenus on käivitatud ja kontrollitud sisevõrgus. Tegemist on Docker Compose'i poolt käivitatud rakendusega, mille konteineris töötab `decidim/decidim:latest` ja mille juurde pääseb sisevõrgus aadressil `http://192.168.2.191:3000`.
+Decidim teenus on sisevõrgus kasutatav.
 
-Kontrollitud märgised:
+Teenusele pääseb ligi hostinime kaudu:
 
-- Docker Compose'i olek on kontrollitud: konteinerid `decidim-db`, `decidim-redis` ja `decidim-app` on aktiivsed.
-- Decidim rakendus on tööle läinud ja kuulab sisevõrgus pordil `3000`.
-- HTTP-päringud suunatakse automaatselt HTTPS-ile, kuid TLS-i lõpetamine ei ole veel seadistatud.
-- WAN-poolne juurdepääs pole lubatud.
-- Teenuse toimimine sisevõrgus ei anna alust järeldada, et WAN-poolne juurdepääs oleks toimiv ega et Decidim teenus oleks välisvõrgust kasutuskõlblik.
+    decidim.lan
 
-Praegune tegelik seis:
+Rakendus kuvab administraatori sisselogimislehe.
 
-- Decidim teenus on tööle läinud ja on sisevõrgus kontrollitud.
-- TLS-i lõpetamine ei ole veel seadistatud. HTTP-päringud suunatakse automaatselt HTTPS-ile, kuid pöördproxi TLS-i lõpetamine ei ole veel seadistatud.
-- WAN-poolne juurdepääs pole lubatud.
-- Teenuse toimimine sisevõrgus ei anna alust järeldada, et WAN-poolne juurdepääs oleks toimiv ega et Decidim teenus oleks välisvõrgust kasutuskõlblik.
+Decidim, PostgreSQL ja Redis töötavad.
 
-See tähendab, et järgmine tööetapp on TLS-i lõpetamise seadistamine pöördproxi või muus turvalises kihtis ning seejärel WAN-poolne juurdepääs tuleb eraldi kontrollida ja dokumenteerida, enne kui seda tohib kasutada välisvõrgust.
+Sisevõrgu DNS-lahendus toimib OpenWrt dnsmasq kaudu.
 
+Kasutajaliides on kontrollitud veebibrauserist.
 ## 10. Võrgukonfiguratsioon ja taristuseosed
 
 - Vaikelüüs ja LAN-ruuter: OpenWrt, `192.168.2.1/24`
