@@ -127,29 +127,22 @@ Kataloogide tegelik olemasolu, omanikud, rühmad ja õigused tuleb dokumenteerid
 
 ## 9.1. Decidimi teenuse tegelik seis
 
-Decidim teenus on sisevõrgus kasutatav.
+Decidim teenus on sisevõrgus kasutatav aadressil:
 
-Teenusele pääseb ligi hostinime kaudu:
+https://decidim.lan
 
-    decidim.lan
+OpenWrt dnsmasq lahendab nime decidim.lan
+serveri decidim02 aadressile.
 
-Rakendus kuvab administraatori sisselogimislehe.
+Nginx töötab TLS-lõpetajana.
 
-Decidim, PostgreSQL ja Redis töötavad.
+Decidim, PostgreSQL ja Redis konteinerid
+on töös ning omavahel ühendatud Dockeri
+võrgus decidim_default.
 
-Sisevõrgu DNS-lahendus toimib OpenWrt dnsmasq kaudu.
+Decidim veebiliides on kontrollitud
+brauserist ja rakendus vastab.
 
-Kasutajaliides on kontrollitud veebibrauserist.
-
-Kontrollitud 2026-10-27.
-
-Decidim::Organization.count = 0
-
-Rakendus on käivitatud ning veebiliides on sisevõrgust
-kättesaadav nime decidim.lan kaudu.
-
-Organisatsiooni ei ole veel loodud ning süsteem
-on Decidimi esmase kasutuselevõtu seisus.
 
 ## 10. Võrgukonfiguratsioon ja taristuseosed
 
