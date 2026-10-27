@@ -4,14 +4,14 @@ Hoidla sisaldab korteriühistu serverite, võrguseadmete ja nendega seotud teenu
 
 ## Dokumentatsioon
 
-- [Decidim02 tarkvarainventuur ja serveri konfiguratsioon](docs/Decidim02_Software_Inventory_and_Server_Configuration.md)
-- [OpenWrt ruuteri tarkvarainventuur ja konfiguratsioon](docs/OpenWrt_Router_Software_Inventory_and_Configuration.md)
+- [Decidim02 tarkvara-andmestu ja serveri konfiguratsioon](docs/Decidim02_Software_Inventory_and_Server_Configuration.md)
+- [OpenWrt ruuteri tarkvara-andmestu ja konfiguratsioon](docs/OpenWrt_Router_Software_Inventory_and_Configuration.md)
 - [OpenWrt ruuteri turvalise halduse tegevusjuhend](docs/OpenWrt_Router_Secure_Management_Runbook.md)
 - [Task Intake mall](docs/process/task-intake-template.md)
 
 ## Kataloogid
 
-- `docs/` – inventuuri-, konfiguratsiooni- ja tegevusjuhendid;
+- `docs/` – andmestu-, konfiguratsiooni- ja tegevusjuhendid;
 - `decidim02/` – serveri rakendus- ja teenusekonfiguratsioonid;
 - `openwrt/` – ruuteri skriptid ning saladustest puhastatud konfiguratsioonid;
 - `local-only/` – kohalikud varukoopiad ja binaarfailid; kataloogi ei kanta Git-hoidlasse.
