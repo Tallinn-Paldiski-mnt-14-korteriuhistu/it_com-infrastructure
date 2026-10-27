@@ -140,6 +140,17 @@ Decidim, PostgreSQL ja Redis töötavad.
 Sisevõrgu DNS-lahendus toimib OpenWrt dnsmasq kaudu.
 
 Kasutajaliides on kontrollitud veebibrauserist.
+
+Kontrollitud 2026-10-27.
+
+Decidim::Organization.count = 0
+
+Rakendus on käivitatud ning veebiliides on sisevõrgust
+kättesaadav nime decidim.lan kaudu.
+
+Organisatsiooni ei ole veel loodud ning süsteem
+on Decidimi esmase kasutuselevõtu seisus.
+
 ## 10. Võrgukonfiguratsioon ja taristuseosed
 
 - Vaikelüüs ja LAN-ruuter: OpenWrt, `192.168.2.1/24`
