@@ -172,7 +172,10 @@ ss -lntup
 - DDNS, kui avalik aadress on dünaamiline;
 - LuCI sertifikaadi usalduslahendus;
 - Wi-Fi lõplik konfiguratsioon;
-- serveri `decidim02` DHCP staatiline rent või muu püsiaadress.
+- serveri `decidim02` DHCP staatiline rent või muu püsiaadress:
+- DHCPREQUEST(br-lan) 192.168.2.191 18:67:b0:4f:46:25
+- DHCPNAK(br-lan) 192.168.2.191 18:67:b0:4f:46:25 address reserved
+- tähendab, et 192.168.2.191 on dnsmasq järgi reserveeritud aadress, kuid klient proovib saada aadressi viisil, mis ei vasta reserveeringule.
 
 ## 13. Dokumendi haldus
 
