@@ -183,9 +183,30 @@ decidim-app
 - Vaikelüüs ja LAN-ruuter: OpenWrt, `192.168.2.1/24`
 - LAN-võrk: `192.168.2.0/24`
 - Võrgumask: `255.255.255.0`
-- Serveri `decidim02` püsiv IPv4-aadress või DHCP staatiline rent: veel määramata
 
-Serveri püsivat IPv4-aadressi ei tohi dokumenteerida oletuslikult. Aadress lisatakse pärast staatilise DHCP-rendi või serveripoolse püsiva võrgukonfiguratsiooni rakendamist ja kontrollimist.
+### Võrguidentiteet
+
+Hostinimi:
+
+    decidim02
+
+IPv4:
+
+    192.168.2.191/24
+
+DNS nimi:
+
+    decidim02.lan
+
+Teenuse nimi:
+
+    decidim.lan
+
+MAC:
+
+    18:67:b0:4f:46:25
+
+Aadress eraldatakse OpenWrt DHCP staatilise rendi abil.
 
 Ruuteri tarkvarainventuur ja konfiguratsioon:
 
