@@ -127,21 +127,55 @@ Kataloogide tegelik olemasolu, omanikud, rühmad ja õigused tuleb dokumenteerid
 
 ## 9.1. Decidimi teenuse tegelik seis
 
-Decidim teenus on sisevõrgus kasutatav aadressil:
+### Kontrollitud seis 2026-10-28
 
-https://decidim.lan
+OpenWrt dnsmasq lahendab nime:
 
-OpenWrt dnsmasq lahendab nime decidim.lan
-serveri decidim02 aadressile.
+    decidim.lan -> 192.168.2.191
 
-Nginx töötab TLS-lõpetajana.
+Decidim veebiliides on sisevõrgust kättesaadav:
 
-Decidim, PostgreSQL ja Redis konteinerid
-on töös ning omavahel ühendatud Dockeri
-võrgus decidim_default.
+    https://decidim.lan
 
-Decidim veebiliides on kontrollitud
-brauserist ja rakendus vastab.
+Kontrollitud asjaolud:
+
+- Decidim rakendus töötab.
+- PostgreSQL konteiner töötab.
+- Redis konteiner töötab.
+- Nginx töötab TLS-lõpetajana.
+- HTTP suunatakse HTTPS-ile.
+- Veebiliides avaneb brauseris.
+
+Konteinerid:
+
+- decidim-nginx
+- decidim-app
+- decidim-db
+- decidim-redis
+
+Rakendusse pole veel loodud ühtegi organisatsiooni.
+
+Kontroll:
+
+    Decidim::Organization.count = 0
+
+Rakendus on Decidimi esmase kasutuselevõtu seisus.
+
+## 9.2 Tegelik arhiektuur
+
+OpenWrt (dnsmasq)
+        │
+        ▼
+decidim.lan
+        │
+        ▼
+decidim-nginx
+        │
+        ▼
+decidim-app
+        │
+        ├── decidim-db
+        └── decidim-redis
 
 
 ## 10. Võrgukonfiguratsioon ja taristuseosed
@@ -187,7 +221,6 @@ Git-hoidlasse ei kanta paroole, SSH või WireGuardi privaatvõtmeid, WireGuardi 
 ## 12. Veel seadistamata või dokumenteerimata
 
 - Restic-varundus;
-- Decidimi Docker Compose'i keskkond;
 - PostgreSQL-i varundus;
 - PostgreSQL-i replikatsioon;
 - wM-Bus tarkvara;
@@ -196,9 +229,11 @@ Git-hoidlasse ei kanta paroole, SSH või WireGuardi privaatvõtmeid, WireGuardi 
 - Traefik või Nginx;
 - SSH-serveri turvakõvastuse lõplik konfiguratsioon;
 - rakendus- ja konfiguratsioonifailide lõplik paigutus Git-hoidlas.
-- Parandada sisevõrgu TLS sertifikaat:
+- Parandada sisevõrgu TLS sertifikaadi SAN-väljade täiendamine:
 lisada Subject Alternative Name (SAN).
--
+-- Decidimi organisatsiooni loomine
+- Decidimi administraatori konto loomine
+
 
 ## 13. Kontrollkäsud
 
