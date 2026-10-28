@@ -10,7 +10,7 @@ Dokument kirjeldab OpenWrt ruuteri tarkvarainventuuri, püsivat võrgukonfigurat
 |---|---|---|
 | 0.1 | 2026-10-23 | Koostatud ruuteri esialgne inventuuri- ja konfiguratsioonikirjeldus. |
 
-## 1. Seadme identifitseerimine
+## 1.1 Seadme identifitseerimine
 
 - Seade: OpenWrt ruuter
 - Püsivara: OpenWrt 25.12.6
@@ -27,6 +27,19 @@ Ruuteri täpne mudel, arhitektuur, sihtplatvorm, kerneli versioon ja paigaldatud
 - CIDR: `192.168.2.1/24`
 - LAN-võrk: `192.168.2.0/24`
 - Leviaadress: `192.168.2.255`
+
+## 1.2 WAN ühendus
+
+Kontrollitud 2026-10-28:
+
+    WAN IPv4: 81.25.240.45/25
+
+Avalik IPv4 aadress saadakse DHCP kaudu.
+
+Aadress ei ole garanteeritult püsiv.
+
+Kaugjuurdepääsu lahendused ei tohi sõltuda fikseeritud avalikust IPv4 aadressist.
+
 
 ## 3. Haldusmudel
 
@@ -123,6 +136,28 @@ Seotud serveridokument:
 Seotud tegevusjuhend:
 
 - [`OpenWrt_Router_Secure_Management_Runbook.md`](OpenWrt_Router_Secure_Management_Runbook.md)
+
+## 9.2 ## DNS ja Decidim
+
+Kontrollitud:
+
+    decidim.lan -> 192.168.2.191
+
+Nime lahendamine toimub OpenWrt dnsmasq kaudu.
+
+Decidim infrastruktuuri nimed:
+
+    decidim.lan
+    decidim01.lan
+    decidim02.lan
+
+Teenusenimi:
+
+    decidim.lan
+
+on ette nähtud osutama aktiivsele Decidimi sõlmele.
+
+
 
 ## 10. Git-hoidla seosed
 
