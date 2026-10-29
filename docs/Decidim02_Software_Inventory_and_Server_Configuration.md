@@ -95,10 +95,10 @@ Paketiversioonid tuleb pärast süsteemi või pakettide uuendamist üle kontroll
 ## 7. SSH konfiguratsioon
 
 - Halduskasutaja: `abeek`
-- Autentimine: Ed25519 SSH-võti
+- imine: Ed25519 SSH-võti
 - Võtmepõhine sisselogimine on kontrollitud.
 
-„Võtmepõhine” ei tähenda tingimata, et SSH privaatvõti on paroolifraasita. Serveri kasutajakonto parooli asemel kasutatakse SSH avaliku võtme autentimist.
+„Võtmepõhine” ei tähenda tingimata, et SSH privaatvõti on paroolifraasita. Serveri kasutajakonto parooli asemel kasutatakse SSH avaliku võtme imist.
 
 SSH-serveri täpsed aktiivsed sätted tuleb pärast serveri turvakõvastuse lõpetamist lisada tegeliku konfiguratsiooni ja kontrollväljundite alusel.
 
@@ -125,9 +125,9 @@ Kavandatud kataloogid:
 
 Kataloogide tegelik olemasolu, omanikud, rühmad ja õigused tuleb dokumenteerida pärast nende loomist või kontrollimist.
 
-## 9.1. Decidimi teenuse tegelik seis
+### 9.1. Decidimi teenuse tegelik seis
 
-### Kontrollitud seis 2026-10-28
+#### Kontrollitud seis 2026-10-28
 
 OpenWrt dnsmasq lahendab nime:
 
@@ -161,7 +161,7 @@ Kontroll:
 
 Rakendus on Decidimi esmase kasutuselevõtu seisus.
 
-## 9.2 Tegelik arhiektuur
+### 9.2 Tegelik arhiektuur
 
 OpenWrt (dnsmasq)
         │
@@ -176,6 +176,30 @@ decidim-app
         │
         ├── decidim-db
         └── decidim-redis
+
+### 9.3 Decidim kasutaja tuvastamisest tulevikus
+
+Decidim
+  │
+  ▼
+Keycloak
+  │
+  ▼
+ID-kaardi, Mobiil-ID ja Smart-ID erasektori autentimisteenused (nt Eesti Interneti SA eeID)
+  │
+  ▼
+Isik tuvastatud (isikukood)
+  │
+  ▼
+Liikmesuse ja hääleõiguse kontroll
+
+Esimeses etapis kasutada:
+- Keycloaki koos erasektorile kättesaadava ID-kaardi, Mobiil-ID ja Smart-ID autentimisega;
+- juhatuse poolt e-kinnistusraamatust alla laaditud omanike nimekirja kontrollitud importi;
+- Decidimi kõrval eraldi hääleõiguse registrit;
+- käsitsi kinnitamist kaasomandi, juriidilise isiku ja volituse juhtudel.
+Täielik reaalajas automatiseerimine tuleb kavandada alles pärast seda, kui Registrite ja Infosüsteemide Keskus on kinnitanud korteriühistule või teenusepakkujale sobiva lepingulise andmeteenuse, selle andmekoosseisu ja kasutustingimused.
+##### 9.3.1 Kõiki autentimiskulusid ei pruugi jagada ühtlaselt. Sobivaim mudel on, kui ühistu katab süsteemi püsikulud ja vajaduse korral odavaima autentimisviisi baaskulu. Kasutaja valitud kallima autentimisviisi lisakulu kantakse vastava korteriomandi igakuisele arvele.
 
 
 ## 10. Võrgukonfiguratsioon ja taristuseosed
